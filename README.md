@@ -190,7 +190,28 @@ const value = useContext(MyContext);
 
 4. `useReducer`
 
-useContext provides a way to pass data through the component tree without manually passing props. It uses React’s Context API.
+The useReducer hook is a React hook used to manage complex state logic inside functional components. It is conceptually similar to Redux. i.e, Instead of directly updating state like with useState, you dispatch an action to a reducer function, and the reducer returns the new state.
+
+The useReducer hook takes three arguments:
+
+```javascript
+const [state, dispatch] = useReducer(reducer, initialState, initFunction);
+```
+        *   `**reducer**`: A function `(state, action) => newState` that handles how state should change based on the action.
+        *   `**initialState**`: The starting state.
+        *   `**dispatch**`: A function you call to trigger an update by passing an action.
+
+     The `useReducer` hook is used when:
+
+     *   The **state is complex**, such as nested structures or multiple related values.
+     *   State updates depend on the **previous state** and **logic**.
+     *   You want to **separate state update logic** from UI code to make it cleaner and testable.
+     *   You’re managing features like:
+         *   Forms
+         *   Wizards / Multi-step flows
+         *   Undo/Redo functionality
+         *   Shopping cart logic
+         *   Toggle & conditional UI logic
 
 ```javascript
 function reducer(state, action) {
