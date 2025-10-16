@@ -197,21 +197,21 @@ The useReducer hook takes three arguments:
 ```javascript
 const [state, dispatch] = useReducer(reducer, initialState, initFunction);
 ```
-        *   `**reducer**`: A function `(state, action) => newState` that handles how state should change based on the action.
-        *   `**initialState**`: The starting state.
-        *   `**dispatch**`: A function you call to trigger an update by passing an action.
+*   `**reducer**`: A function `(state, action) => newState` that handles how state should change based on the action.
+*   `**initialState**`: The starting state.
+*   `**dispatch**`: A function you call to trigger an update by passing an action.
 
-     The `useReducer` hook is used when:
+The `useReducer` hook is used when:
 
-     *   The **state is complex**, such as nested structures or multiple related values.
-     *   State updates depend on the **previous state** and **logic**.
-     *   You want to **separate state update logic** from UI code to make it cleaner and testable.
-     *   You’re managing features like:
-         *   Forms
-         *   Wizards / Multi-step flows
-         *   Undo/Redo functionality
-         *   Shopping cart logic
-         *   Toggle & conditional UI logic
+*   The **state is complex**, such as nested structures or multiple related values.
+*   State updates depend on the **previous state** and **logic**.
+*   You want to **separate state update logic** from UI code to make it cleaner and testable.
+*   You’re managing features like:
+    *   Forms
+    *   Wizards / Multi-step flows
+    *   Undo/Redo functionality
+    *   Shopping cart logic
+    *   Toggle & conditional UI logic
 
 ```javascript
 function reducer(state, action) {
